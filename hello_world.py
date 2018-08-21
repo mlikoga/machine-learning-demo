@@ -5,7 +5,7 @@ from sklearn import tree
 # 2. Extrair as features
 feature_names = ['Calibre', 'Comprimento']
 features = [[10,20], [5,7], [13,15], [3,10], [15,20], [16,23], [13,19], [14,17]]
-classes = {0: 'A', 1: 'B'}
+classes = { 0: 'A', 1: 'B' }
 labels = [0, 0, 0, 0, 1, 1, 1, 1]
 
 # 3. Treinar
@@ -26,4 +26,5 @@ graph.render("tree")
 while True:
   inputStr = raw_input("\nInsira novo dado de entrada: ")
   input = map(int, inputStr.split(','))
-  print "Essa entrada foi classificada como: " + classes[classifier.predict([input])[0]]
+  output = classifier.predict([input])[0]
+  print "Essa entrada foi classificada como: " + classes[output]
