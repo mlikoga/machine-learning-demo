@@ -40,11 +40,8 @@ portuguese_phrases = filter(None,
 
 
 all_phrases = english_phrases + portuguese_phrases
-print(all_phrases)
 for phrase in all_phrases:
   features.append(extract_features(phrase))
-
-print(features)
 
 for phrase in english_phrases:
   classes.append(0)
